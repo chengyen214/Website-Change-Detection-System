@@ -40,22 +40,3 @@
 * 安裝套件 `pip install numpy'
 * 安裝套件 `pip install matplotlib'
 * 安裝套件 `pip install opencv-python'
-
-## Page
-
-1. Read
-    - /CourseSelectRecommendation
-    - /Read/SelectCourse
-    - /Read/Course
-    - /Read/Student
-    - /Read/Teacher
-2. Create
-    - /Create/DataSubmission
-    - /Create/Course
-    - /Create/Student
-    - /Create/Teacher
-3. Update
-    - /PersonalData/Update
-4. Delete
-    - /Delete/SelectCourse
-    - /Delete/Student
