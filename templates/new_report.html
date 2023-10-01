@@ -1,0 +1,146 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试报告</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/chosen/1.8.2/chosen.css" rel="stylesheet">
+    <base target="_blank">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/report.css') }}">
+</head>
+
+<body class="gray-bg">
+    <div class="row  border-bottom white-bg dashboard-header">
+        <div class="col-sm-12 text-center">
+            <span style="color: #1ab394; font-size: 20px; font-weight: 700">測試報告</span>
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>報告彙總</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-6 b-r" style="height:200px">
+                                <form class="form-horizontal">
+                                    <!-- <div class="form-group">
+                                        <label class="col-sm-2 control-label text-navy">網站名稱</label>
+                                        <div class="col-sm-5">
+                                            <span class="form-control" id="testName">{{網站名稱}}</span>
+                                        </div>
+                                    </div> -->
+                                    {% for url_link in url_links %}
+                                    <tr>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label text-navy">網站鏈結</label>
+                                            <div class="col-sm-5">
+                                                <span class="form-control" id="testAll">
+                                                    {{url_link}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </tr>
+                                    {% endfor %}
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label text-danger">網站更改次數:</label>
+                                        <div class="col-sm-5">
+                                            <span class="form-control text-danger" id="testFail">{{change_amount}}</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>詳細數據</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <!-- <div class="input-group panel-heading" style="width: 100%; background-color: #1ab394; margin-bottom: 10px; text-align: left; font-family: Consolas;"> -->
+                            <!-- <label style="color: snow">Error_type:</label>
+                            <select required style="width: 300px;height: 50px;" name="filterClass" id="filterClass">
+                                <option value=""selected>----------</option>
+                                <option value="url_change">url_change</option>
+                                <option value="Web_Status_codes">Web_Status_codes</option>
+                            </select> -->
+
+                            
+
+                            <!-- <label style="color: snow">Error_web:</label>
+                            <select required style="width: 300px;height: 50px;" name="filterClass" id="filterClass" onChange="renew_err_type(this.selectedIndex,messages);">
+                                <option value=""selected>----------</option>
+                                {% for message in messages %}
+                                
+                                <option value= {{message}} >{{ message }}</option>
+                                {% endfor %}
+                            </select> -->
+
+                        <!-- </div> -->
+                        <form name="err_Form">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Website</th><th>error_time</th><th>error_type</th><th>error_describe</th><th>
+                                </tr>
+                                {% for err_inform in err_informs %}
+                                <tr name="test">
+                                    <th>{{err_inform[0]}}</th><th>{{err_inform[1]}}</th><th>{{err_inform[2]}}</th><th>{{err_inform[3]}}</th><th>
+                                </tr>
+                                {% endfor %}
+                                </thead>
+                                <tbody id="detailBody">
+                                </tbody>
+                            </table>
+                            
+                            {% if normal_web != 'False' %} 
+                            <table class="table table-bordered">
+                                <thead>
+                                    <div style="text-align:center;">
+                                        <tr >
+                                            <th >normal web pages</th>
+                                        </tr>
+                                    </div>
+                                    
+                                    {% for web in normal_web %}
+                                    <tr name="test">
+                                        <th>{{web}}</th>
+                                    </tr>
+                                    {% endfor %}
+                                </thead>
+                            </table>
+                            {% endif %} 
+                        </form>
+                            
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

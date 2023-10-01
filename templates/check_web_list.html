@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!--註解-->
+        <meta charset="UTF-8"/>
+        <title>Website Change Detection System_insert</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+    </head>
+    <body>
+        <br>
+        <br>
+        <br/>
+        <form method='post' action="" style="width: 1000px;">
+            <p>請登記勾選想要查詢的網頁</p>
+            {% for web in web_list %}
+            <input type="checkbox" name="web_url" style="vertical-align:middle; margin-top:0;" value={{web[0]}} >{{web[0]}}</input>
+            {% endfor %}
+            <button type='submit'>提交</button>
+        </form>
+        
+    </body>
+</html>

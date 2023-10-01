@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!--註解-->
+        <meta charset="UTF-8"/>
+        <title>Website Change Detection System_insert</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+    </head>
+    <body>
+        <br>
+        <br>
+        <br/>
+        <form method='post' action="" >
+            <P style="font-size:90%;justify-content:center;" >{{url}}</P>
+            <P style="font-size:90%;justify-content:center;" >此網站尚未登記檢測</P>
+            <P style="font-size:90%;justify-content:center;">是否登記網站進行檢測</P>
+            <div >
+                <input type="submit" name="yes" value="yes" >
+                <input type="submit" name="no" value="no">
+            </div>
+        </form>
+        
+    </body>
+</html>
+<!-- style="justify-content:center -->
+<!-- style="text-align:center;" -->

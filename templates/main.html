@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!--註解-->
+        <meta charset="UTF-8"/>
+        <title>Website Change Detection System</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <form method='post' >
+            <p>
+                <label for="url">嘗試要檢查的網站</label>
+                <input type='text' id="url" name='url' placeholder="請輸入網站網址">
+            </p>
+            <p>
+                <button type='submit'>提交</button>
+            </p>
+            <p style="justify-content:center;">
+                <input type="submit" name="check_all" value="查看當前已登記網站列表" >
+            </p>
+            
+        </form>
+        
+        <!-- <p>{{check_url}}</p> -->
+        <!-- {% if check_url=="True"  %}
+        <p>以下為報錯紀錄</p>
+        {% endif %} -->
+        {% if check_url=="False" %}
+        <P>無錯誤紀錄</P>
+        {% endif %}
+        {% if check_url=="true1" %}
+        <form method='post'>
+            <P style="font-size:90%;justify-content:center;" >此網站已登記檢測</P>
+        </form>
+        {% endif %}
+    </body>
+</html>
