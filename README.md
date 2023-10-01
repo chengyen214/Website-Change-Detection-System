@@ -4,23 +4,42 @@
 
 ## Prerequisites
 
-- python 
-- MySQL
+- python
+- selenium
 - Flask
+- MySQL
+- beautifulsoup4
+- Request
+- cv2
+
+
+
+# selenium
+* 安裝套件 `pip install selenium`
+* 啟動 `web_html_downlod.py`開啟後台系統定期追蹤
+'
 
 # Flask
-* 安裝套件 `pip install -r REQUIREMENT.txt`
-* 啟動 `python index.py`
+* 安裝套件 `pip install Flask`
+* 啟動 `website.py`開啟登記網頁運行
 * http://localhost:5000/
 
-## ER Model 
+#  MySQL
+* 安裝套件 `pip install pymysql'
+* Mysql檔檔案夾內檔案載入自己資料夾內
+* 所有出現db_setting的python檔內，改為自己MySQL的帳號密碼
 
-![image](./images/ERModel.png)
+#  beautifulsoup4
+* 安裝套件 `pip install beautifulsoup4'
 
-## Relational Schema
 
-![image](./images/Relation1.png)
-![image](./images/Relation2.png)
+# Request
+* 安裝套件 `pip install requests'
+
+# cv2
+* 安裝套件 `pip install numpy'
+* 安裝套件 `pip install matplotlib'
+* 安裝套件 `pip install opencv-python'
 
 ## Page
 
