@@ -5,6 +5,7 @@
 ## Prerequisites
 
 - python
+- Webdriver
 - selenium
 - Flask
 - MySQL
