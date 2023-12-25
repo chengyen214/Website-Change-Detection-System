@@ -12,12 +12,15 @@
 - Request
 - cv2
 
-
+# Webdriver 
+* 先到 http://chromedriver.chromium.org/downloads 下載符合版本的ChromeDriver
+* ChromeDriver不一定即時更新，如果未有版本，至https://googlechromelabs.github.io/chrome-for-testing/ 下載符合版本的ChromeDriver
 
 # selenium
 * 安裝套件 `pip install selenium`
 * 啟動 `web_html_downlod.py`開啟後台系統定期追蹤
-'
+* 選擇 chromedriver_win32.zip，下載完成後，解壓縮後，就會看到 chromedriver.exe
+* 將chromedriver.exe放到跟python.exe一樣的目錄下(也可放在和欲執行程式相同檔案夾)
 
 # Flask
 * 安裝套件 `pip install Flask`
